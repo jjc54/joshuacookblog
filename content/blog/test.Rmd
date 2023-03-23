@@ -1,0 +1,188 @@
+---
+title: "CRM 716 Stakeholder Interviews Final Synthesis"
+author: "Joshua J. Cook"
+date: "August 20th, 2022"
+output: html
+---
+  
+```{r, fig.align='center', out.width="50%", out.height="50%", echo=FALSE}
+###WFUSCOM Logo
+knitr::include_graphics('Logo.png')
+```
+  
+## Capstone Information ##
+
+**Program:** Master of Science (M.S.) - Clinical Research Management (CRM)
+
+**Title:** EFFECTIVE STRATEGIES TO INTEGRATE ORTHOPEDIC CLINICAL CARE WITH CLINICAL RESEARCH
+
+**Background:** 
+
+* Clinical trials are becoming increasingly complex and expensive to conduct in the traditional, isolated environment.  
+* For orthopedics, this is especially true as the number of investigational drugs, devices, and biologics currently being studied is increasing rapidly. 
+* Conducting trials that follow a pragmatic design (i.e., a trial that is practical within routine clinical care, with more generalizable outcomes), offers a way to conduct high quality research without compromising clinic time. Unfortunately, the best ways to plan and implement pragmatic trials has yet to be elucidated. Specifically, pragmatic trials should:  
+  * Demonstrate a high degree of frictionless integration into clinical practice (i.e., without disrupting the normal flow of patients),  
+  * Respect current clinical research regulations (ex: CFR and IRB Guidelines). 
+  * Allow for a variety of meaningful trial designs with achievable prospective or retrospective outcomes (ex: observational, cohort, case-control). 
+  * Outcomes may be standard-of-care (SOC) value collections (ex: pain scaling, employment status, physical therapy, surgery follow-ups) or interventional in nature (ex: a randomized investigational         treatment).  
+* Thus, the aim of these interviews is to assess effective strategies (and problems) to integrate orthopedic clinical care with clinical research. Additionally, the effect of research on the patient-physician relationship and quality of care should be assessed prior to wide-spread implementation of pragmatic trials. Due to the clinical practice-based nature of my capstone project, I believe orthopedic clinicians and patients are my ideal groups of stakeholders.  
+
+**Partners Interviewed:**
+
+* Orthopedic Physicians (n=2) - Stakeholder Partners. 
+  * Target audience who arguably stand to benefit the most from my project.   
+  * The schedule of an orthopedic clinician is extremely demanding and thus efficient clinical research methods are required for them to be a part of the research process.   
+  * The clinicians will serve a key role as stakeholder partners in understanding the normal flow of a clinic, and what practices are not only important to answer orthopedic research questions but are also     feasible to seamlessly implement into their clinic.   
+  * These stakeholders should have an active voice in deciding which pragmatic implementation strategies work and which do not based on their experiences with current clinical research regulations and a     variety of meaningful trial designs.    
+
+* Orthopedic Patients (n=3) - Patient Stakeholders. 
+  * Will serve an important role as patient partners who can provide insight on the patient-experience regarding pragmatic clinical trials.   
+  * Based on my previous literature review, a pragmatic trial should fulfill two main requirements: conduct must resemble routine clinical practice, and the results should be applicable to multiple other      settings (i.e., generalizable). 
+  * Getting the perspective of those receiving the care is a key opportunity to confirm that what is being done as part of a pragmatic clinical trial is resembling routine clinical practice (in terms of       accessibility, safety, comfort, quality, and a variety of other factors). 
+  * Additionally, I stand by the idea that clinical research should be a core part of clinical care, not a last-ditch effort. Therefore, the insight provided by patient partners can help determine if the      strategies being used to implement pragmatic trials are adding to their patient care or impeding it in some way.   
+
+* **All stakeholders will verbally agree to be interviewed and to have the interview recorded/transcribed if comfortable.**  
+
+```{r, include=FALSE}
+### Installing packages & calling libraries ###
+
+#install.packages("readxl")
+#install.packages("tidyverse") #Always install packages first, then call libraries
+#install.packages("kableExtra")
+#install.packages("bibtex")
+
+library(readxl) #Within R for excel imports, specifically using sheets
+library(tidyverse) #Full tidyverse
+library(knitr)
+library(kableExtra)
+library(bibtex)
+```
+
+
+```{r, include=FALSE}
+### Data import ###
+
+excel_sheets("Background.xlsx")
+Patient_data <- read_excel("Background.xlsx", sheet=1) #Imports directly into a dataframe
+Physician_data <- read_excel("Background.xlsx", sheet=2) #Imports directly into a dataframe
+
+excel_sheets("Findings.xlsx")
+Problems_data <- read_excel("Findings.xlsx", sheet=1) #Imports directly into a dataframe
+Strategies_data <- read_excel("Findings.xlsx", sheet=2) #Imports directly into a dataframe
+Access_data <- read_excel("Findings.xlsx", sheet=3) #Imports directly into a dataframe
+Quality_data <- read_excel("Findings.xlsx", sheet=4) #Imports directly into a dataframe
+
+options(knitr.kable.NA = '')
+```
+
+\newpage
+
+## Physician Interviews ##
+
+```{r, fig.align='left', out.width="10%", out.height="10%", echo=FALSE}
+###PHYS Logo
+knitr::include_graphics('phy.png')
+```
+
+```{r, echo=FALSE}
+### Background Table ###
+Physician_data %>%
+  kbl(align=c("cccccccc"), caption="Table 1. Background information collected from each of the participating physician stakeholders (n=2).") %>%
+  kable_classic(full_width=F)
+```
+
+Background information for both physicians is provided in Table 1. Both physicians were self-described orthopedic surgeons with a subspeciality in sports medicine. Importantly, surgeons were only in clinic 2.5 days of the week, averaging 6.6 hours per day to see an average of 40 patients per day. The physicians were assisted by 3-4 staff members. Only one of the physicians had experience with pragmatic clinical trials, but both had done other types of research.   
+
+It is important to note that the way surgeons split their time may not be the same as other specialties and may contribute to the successful integration of clinical research into practice. Additionally, the term "pragmatic" may be new for physicians to hear, even if they were previously conducting pragmatic research. Explanation of pragmatic clinical trials was necessary during discussions, but the physicians understood what was meant and one admitted to doing pragmatic research though he chose not to describe it in this way. Even if some physicians are conducting pragmatic clinical trials, many other types of research are also being conducted by physicians outside of the clinic setting. 
+  
+```{r, echo=FALSE}
+### Themes: Integration Problems ###
+Problems_data %>%
+  kbl(align=c("ccccccccc"), caption="Table 2. Key themes observed during discussions of problems integrating clinical care with clinical research (n=2).") %>%
+  kable_classic(full_width=F)
+```
+
+As shown in table 2, two primary themes emerged when discussing the problems faced when integrating clinical research with clinical care. The first theme involves general clinic slowdown, which was primarily attributed to problematic patients and authorization of insurance. The second theme involved research-related slowdowns which ranged from completing documentation to the stigma associated with research conduct.
+
+A key factor in clinic flow seems to be balancing empathy with information dissemination. Staff training and incentivization was also discussed at length by both physicians. The staff seems to play a big role in the conduct of the study, and thus research-oriented and motivated staff is likely required to successfully complete research studies. 
+
+```{r, echo=FALSE}
+### Themes: Effective Integration Strategies  ###
+Strategies_data %>%
+  kbl(align=c("cccccccccccc"), caption="Table 3. Key themes observed during discussions of effective strategies integrating clinical care with clinical research (n=2).") %>%
+  kable_classic(full_width=F)
+```
+
+Three themes were associated with effective strategies to integrate clinical research with clinical care, as shown in table 3. First, patient-centeredness is a key theme to ensure that the patient feels prioritized and empowered. This is accomplished by showing empathy, being knowledgeable, expressing clear communication, and by involving the patient in shared decision making. Aspects of staff management also represent effective strategies, primarily the delegation of roles and encouragement by leaders. Finally, several aspects of study conduct impact integration effectiveness. Simplifying the study design, collecting easy outcome measures, and starting with smaller studies improves integration. 
+
+Based on these interviews, it seems reasonable to assume that the trust between a patient and their physician is the deciding factor of research involvement. If a patient does not feel heard nor prioritized, they do not want to be in the clinic, let alone a research study. As previously mentioned, the clinic staff also impact the effectiveness of a study, and must be adequately trained and lifted up by leaders to conduct a study appropriately. Despite previously completing randomized controlled trials (RCTs), physicians seem to prefer easier study designs that fit their clinic flow, which seems like an appropriate route for pragmatic trial designs given the growing complexity of RCTs.
+
+## Patient Interviews ##
+
+```{r, fig.align='left', out.width="10%", out.height="10%", echo=FALSE}
+###PAT Logo
+knitr::include_graphics('pat.png')
+```
+
+```{r, echo=FALSE}
+### Background Table ###
+Patient_data %>%
+  kbl(align=c("cccccccc"), caption="Table 4. Background information collected from each of the participating patient stakeholders (n=3).") %>%
+  kable_classic(full_width=F)
+```
+
+Background information for all three patients is provided in Table 4. These interviews included one male and two female patients aged 40-44. Two of the patients were white while one  was Hispanic. All three patients had insurance coverage and were seen for surgery. All three patients had differing political opinions and only one patient had previously participated in a clinical trial. 
+
+The primary goal of a patient seeing a physician varied. Some patients just wanted someone to listen and empathize with them, while others viewed their condition as a mystery to solve and wanted as much information about the condition as possible. Insurance costs were considered by one patient when thinking about seeing a physician. 
+
+```{r, echo=FALSE}
+### Themes: Additional Care Access ###
+Access_data %>%
+  kbl(align=c("cccccccccc"), caption="Table 5. Key themes observed during discussions of clinical research accessibility within the clinic setting (n=3).") %>%
+  kable_classic(full_width=F)
+```
+
+As shown in table 5, two themes were observed regarding clinical research accessibility in the clinic setting. The first was patient approachability. In general, patients were comfortable being approached in-clinic about research participation. However, willingness to participate favored non-surgical interventions, with several patients declined surgical studies altogether. Early-phase research was of interest to patients, but last-ditch effort studies (ex: cancer interventions) were viewed with a negative connotation by patients (ex: feeling like a lost cause). The second theme involved patient concerns. Patients were primarily concerned with the trust between them and the physician, which may be the deciding factor in research participation. Patients also considered insurance costs, previous research experiences, and overall time commitment when considering research participation.
+
+It will be important for physicians to prioritize trust and communication with their patients, especially if they plan to recruit for clinical studies. Additionally, patients prefer to be informed and do not see research as inappropriate. For this reason, physicians should stay current with medical knowledge and offer clinical research as a patient care plan alternative when possible, but consider negative connotations. Importantly, trust can be used to bias patients toward participation in clinical research. Physicians should maintain ethical standards and practice caution when speaking to patients about research.
+
+```{r, echo=FALSE}
+### Themes: Quality of Care ###
+Quality_data %>%
+  kbl(align=c("cccccccccc"), caption="Table 6. Key themes observed during discussions of clinical quality of care and the effects of clinical research on quality of care (n=3).") %>%
+  kable_classic(full_width=F)
+```
+
+Table 6 describes the two categories of themes contributing to clinical quality of care and the effects of clinical research on quality of care. The first includes the general factors that impact quality, such as the number of patients in clinic, physician personablity and communication, and the perceived dedication of the physician to treatment. The second theme involves research-specific factors of quality, such as the use of innovative procedures, use of knowledge, and involvement in patient care plans. 
+
+In general, clinics should aim to stay on schedule despite a large patient load to maintain quality. Additionally, physicians must be personable and communicate well to ensure trust, which is indicative of quality. When conducting research, the use of innovative procedures is viewed favorably as a form of evidence-based medicine and a sign of not giving up. Patients see research as an appropriate way to learn using science and want all physicians to be involved in clinical trials. However, the quality of care may or may not be impacted by research involvement (depending on the study outcomes). 
+
+## Future Directions ##
+
+```{r, fig.align='left', out.width="10%", out.height="10%", echo=FALSE}
+###PHYS Logo
+knitr::include_graphics('pub.png')
+```
+
+The themes observed during these interviews will help guide the future direction of my capstone project. I intend to keep studying this topic, potentially by conducting more widespread interviews or by implementing a simple pragmatic trial in an existing clinic and working closely with the physician and clinical staff to monitor problems and strategies. I hope to work on this, or another topic that will benefit current physicians and patients, but will also allow me to investigate the best practices of clinical research conduct since I plan to practice medicine. My final semester will be the Spring of 2023, which will also be when my final capstone report will be due. I will send a copy to all those involved, and will attempt to get the work published in a peer-reviewed journal. 
+
+# References #
+
+```{r, echo=FALSE}
+knitr::write_bib("rmarkdown", file = "References.bib")
+knitr::write_bib("tidyverse", file = "References.bib")
+knitr::write_bib("readxl", file = "References.bib")
+knitr::write_bib("knitr", file = "References.bib")
+knitr::write_bib("kableExtra", file = "References.bib")
+knitr::write_bib("bibtex", file = "References.bib")
+
+citation("rmarkdown") %>% toBibtex()
+citation("tidyverse") %>% toBibtex()
+citation("readxl") %>% toBibtex()
+citation("knitr") %>% toBibtex()
+citation("kableExtra") %>% toBibtex()
+citation("bibtex") %>% toBibtex()
+
+refs <- read.bib("References.bib")
+keys <- names(refs)
+```

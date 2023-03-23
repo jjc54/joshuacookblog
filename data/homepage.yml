@@ -1,0 +1,229 @@
+# banner
+banner:
+  title: "I’m <br> Josh Cook. </br> <small>Clinical Researcher, Data Scientist, and Aspiring Physician-Scientist.</small>"
+  button:
+    enable: true
+    label: "Contact Josh"
+    icon: 'ti-email'
+    URL: "mailto:jcook0312@outlook.com"
+  
+# contact 
+contact:
+  enable: true
+  title: 'Contact Josh'
+  contact_image: "images/about/headshot.jpg"
+  email:
+    title: "Email"
+    email: "jcook0312@outlook.com"
+  button:
+    label: "Contact Josh"
+    icon: 'ti-email'
+    URL: "mailto:jcook0312@outlook.com"
+
+# about
+about:
+  enable : true
+  content : 
+    <p class="lead">
+    <strong> I aim to synthesize my knowledge of the biomedical sciences, clinical research, and data science to become a physician-scientist capable of seamlessly integrating clinical care with clinical research in a way that maximizes evidence-based care options for my patients. </strong> 
+    </p>
+    <pre>
+    
+    In the world of medicine, <br> 
+    There is a need for precision, <br> 
+    Clinical research is the foundation, <br> 
+    Data science adds a new dimension. <br>
+    
+    Patient care is always the goal, <br> 
+    Research helps us reach that role, <br> 
+    But data science is a key part, <br> 
+    To help us make discoveries that are smart. <br>
+    
+    Clinical trials and experiments, <br>
+    Are critical for treatments, <br>
+    But without data, they are incomplete, <br>
+    And the results may not be concrete. <br>
+
+    Data science adds depth and breadth, <br>
+    To the research that we have left, <br>
+    New insights and discoveries to be found, <br>
+    As we dive deep into the data, unbound. <br>
+
+    From genomic sequencing to drug development, <br>
+    Data science has the potential to cement, <br>
+    The discoveries that will change the game, <br> 
+    And help us advance medicine, it's not just a game. <br>
+
+    So let's work together, hand in hand, <br>
+    With clinical research and data science in command, <br>
+    To make strides in the world of medicine, <br>
+    And help all of humanity to win. <br>
+    </pre>
+    
+    <p> <b>Source</b> ChatGPT. Write a poem about medicine, clinical research, and data science. <i>openai.com</i>. Retrieved 2023 Feb 26. </p>
+  author_image: "images/about/headshot.jpg"
+  button:
+    enable : true
+    label : "know more"
+    URL : "about"
+
+# portfolio
+portfolio:
+  enable : false
+  title : "Joshua J. Cook's Portfolio"
+  item_show : 2
+  item_width_lg: 6
+  # portfolio item comes from 'data/portfolio.yml' item.
+
+
+
+# experience
+experience:
+  enable : true
+  title : "Experience"
+  description: "<p class='lead'>Over 6+ years of biomedical and clinical research experience in both academic and industry settings. Currently working in the field of clinical research while pursuing two concurrent master’s degrees to further my research-driven education in preparation for dual doctoral (M.D./Ph.D.) application. I focus on developing informed, innovative, and feasibile strategies to implement clinical research studies and business solutions that mitigate concerns from stakeholders and maximize care access to all patients. </p>"
+  button:
+    icon: "ti-linkedin"
+    btnText: "Linkedin"
+    URL: "https://www.linkedin.com/in/joshua-j-cook-934075169/"
+  button2:
+    icon: "ti-file"
+    btnText: "Download My CV"
+    URL: "/cv/cv-josh.pdf"
+  
+  item: 
+    - logo : "images/experience/icon-1.png"
+      title : "Clinical Research Data & Quality Specialist"
+      company : "Andrews Research & Education Foundation (AREF)"
+      duration : "Feb 2023 - Present"
+      
+    - logo : "images/experience/icon-2.png"
+      title : "Clinical Research Coordinator"
+      company : "Andrews Research & Education Foundation (AREF)"
+      duration : "May 2021 - Feb 2023"
+      
+    - logo : "images/experience/icon-1.png"
+      title : "Lead Clinical Research Coordinator"
+      company : "University of West Florida (UWF) Clinical Trials"
+      duration : "Aug 2018 - Aug 2019"
+
+# education
+education:
+  enable : true
+  title : "Education"
+  item:
+    - title : "Master of Science (M.S.), Data Science"
+      year : "In Progress"
+      academy : "University of West Florida (UWF)"
+      
+    - title : "Master of Sciencee (M.S.), Clinical Research Management"
+      year : "In Progress"
+      academy : "Wake Forest University (WFU)"
+      
+    - title : "Bachelor of Science (B.S.)"
+      year : "2021"
+      academy : "University of West Florida (UWF)"
+
+      
+# skill
+skill:
+  enable : true
+  title : "Top Skills"
+  item:
+    - title : "Good Clinical Practices (GCP)"
+      progress : "90%"
+      color : "#fdb157"
+      
+    - title : "Clinical Study Development"
+      progress : "80%"
+      color : "#9473e6"
+      
+    - title : "R"
+      progress : "70%"
+      color : "#18bc9c"
+      
+    - title : "SAS"
+      progress : "60%"
+      color : "#ffbcaa"
+
+# service
+service:
+  enable : false
+  title : "Services"
+  item:
+    - title : "UI Design"
+      icon : "ti-palette"
+      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      highlighted : false
+
+    - title : "UX Design"
+      icon : "ti-vector"
+      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      highlighted : true
+
+    - title : "Interaction Design"
+      icon : "ti-panel"
+      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      highlighted : false
+
+
+
+# testimonial
+testimonial:
+  enable : false
+  title : "References"
+  item:
+    - name : "Justin Kurland, PhD"
+      image : "images/testimonial/justin.jpg"
+      designation : "Lead Data Scientist, Northwestern Mutual"
+      content : "<p class='lead text-white'><em>In less than 6 months after starting my first Business Science Course with Matt I had fully transitioned into a role as a lead data scientist and my life is better for it!</em></p>"
+      
+    - name : "Chris Selig"
+      image : "images/testimonial/chris.jpg"
+      designation : "Data Scientist"
+      content : "<p class='lead text-white'><em>Because of all the R courses Matt Dancho has provided, I landed my first Data Scientist role. Setting up shiny dashboards in AWS was extremely helpful during my interview.</em></p>"
+        
+    - name : "Mohana Krishna Chittoor"
+      image : "images/testimonial/mohana.jpg"
+      designation : "Lead Data Scientist, Money View"
+      content : "<p class='lead text-white'><em>After your entry into my life, I got a 10% pay raise and then after another 6-months of 26%, and in just another 2-months a 40% hike. I can grab a job wherever I want.</em></p>"
+      
+# client logo slider
+clients_logo_slider:
+  enable : false
+  item:
+    - logo : "images/clients-logo/client-logo-1.png"
+      URL : "http://examplesite.com"
+      
+    - logo : "images/clients-logo/client-logo-2.png"
+      URL : "#"
+      
+    - logo : "images/clients-logo/client-logo-3.png"
+      URL : "http://examplesite.com"
+      
+    - logo : "images/clients-logo/client-logo-4.png"
+      URL : "#"
+      
+    - logo : "images/clients-logo/client-logo-5.png"
+      URL : "http://examplesite.com"
+      
+    - logo : "images/clients-logo/client-logo-1.png"
+      URL : "#"
+      
+    - logo : "images/clients-logo/client-logo-2.png"
+      URL : "http://examplesite.com"
+      
+    - logo : "images/clients-logo/client-logo-3.png"
+      URL : "#"
+      
+    - logo : "images/clients-logo/client-logo-4.png"
+      URL : "http://examplesite.com"
+      
+    - logo : "images/clients-logo/client-logo-5.png"
+      URL : "#"
+
+# blog
+blog:
+  enable : true
+  title : "Blogs"
+  # blog post comes from "content/blog" folder
